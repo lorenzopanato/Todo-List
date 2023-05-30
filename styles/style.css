@@ -3,7 +3,7 @@
 
 :root {
     --font-color: rgb(255, 255, 255);
-    --border-color: rgb(180, 180, 180);
+    --border-color: rgb(165, 165, 165);
 }
 
 * {
@@ -13,7 +13,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, rgb(53, 53, 53), rgb(24, 24, 24));
+    background: linear-gradient(to right, rgb(116, 253, 132),rgb(251, 102, 102));
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -26,10 +26,10 @@ body {
 }
 
 .todo-container {
-    height: 800px;
+    height: 80%;
     width: 500px;
-    border-radius: 10px;
-    background-color: rgb(44, 44, 44);
+    border-radius: 20px;
+    background-color: rgb(17, 17, 17);
     border: 1px solid var(--border-color);
     box-shadow: 1px 1px 5px rgba(226, 226, 226, 0.264), 
         -1px -1px 5px rgba(226, 226, 226, 0.264);
@@ -83,7 +83,7 @@ body {
     color: rgb(100, 100, 100);
 }
 
-.add-task-button, .search-button, .filter-button {
+.add-task-button, .search-button {
     grid-area: b;
     width: 35px;
     font-size: 25px;
@@ -130,7 +130,7 @@ body {
     padding-left: 15px;
 }
 
-.search-button img, .filter-button img {
+.search-button img {
     width: 20px;
 }
 
@@ -185,5 +185,5 @@ body {
 }
 
 .done {
-    background-color: rgba(0, 0, 0, 0.127)
+    background-color: rgba(48, 48, 48, 0.316)
 }

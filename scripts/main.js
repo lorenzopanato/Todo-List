@@ -27,8 +27,8 @@ form.addEventListener('submit', event => {
         task.value = '';
     }
     else {
-        task.style.borderColor = 'rgb(254, 61, 61)'
-        alert('Preencha o campo ou insira uma nova tarefa')
+        task.style.borderColor = 'rgb(254, 61, 61)';
+        alert('Preencha o campo ou insira uma nova tarefa');
     }
 });
 
@@ -61,6 +61,7 @@ function createItem(taskName) {
 
     checkItem(checkButton);
     removeItem(removeButton);
+    filterTasks();
 }
 
 function addLocalStorage(items) {
@@ -89,4 +90,40 @@ function removeItem(button) {
         addLocalStorage(items); 
     });
 }
+
+function filterTasks() {
+    const filterSelect = document.querySelector('.filter-select');
+
+    filterSelect.addEventListener('change', () => {
+
+        const selectedValue = filterSelect.value;
+
+        const itemsHTML = document.querySelectorAll('#item');
+    
+        switch(selectedValue) {
+            case 'all':
+                itemsHTML.forEach(item => item.style.display = 'flex')
+                break;
+            case 'done':
+                itemsHTML.forEach(item =>
+                    item.classList.contains('done')
+                        ? (item.style.display = 'flex')
+                        : (item.style.display = 'none')
+                );
+                break; 
+            case 'todo':
+                itemsHTML.forEach(item =>
+                    !item.classList.contains('done')
+                        ? (item.style.display = 'flex')
+                        : (item.style.display = 'none')
+                );
+                break;
+        }
+    })
+}
+
+
+
+
+
 
