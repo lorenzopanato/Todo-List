@@ -13,6 +13,8 @@ window.addEventListener('load', event => {
             createItem(item);
         });
     }
+
+    searchItem();
 });
 
 form.addEventListener('submit', event => {
@@ -37,6 +39,7 @@ function createItem(taskName) {
     newItem.id = 'item';
 
     const task = document.createElement('li');
+    task.id = 'task-name';
     task.textContent = taskName;
 
     const checkButton = document.createElement('button');
@@ -121,6 +124,29 @@ function filterTasks() {
         }
     })
 }
+
+function searchItem() {
+    const searchBar = document.querySelector('.search-bar');
+    const tasks = document.querySelectorAll('#task-name');
+
+    searchBar.addEventListener('input', () => {
+
+        tasks.forEach(item => {
+            const task = item.textContent;
+
+            if(task.includes(searchBar.value)) {
+                item.parentElement.style.display = 'flex';
+            } 
+            else {
+                item.parentElement.style.display = 'none';
+            }
+        })
+    });
+}
+
+
+
+
 
 
 
