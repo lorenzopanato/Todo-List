@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="todo-container">
+            <h1 id="todo-title">Todo List</h1>
+
+            <form class="new-item js-new-item">
+                <div id="task-container">
+                    <h2 id="task-title">Adicione sua tarefa:</h3>
+                    <input type="text" name="task" class="task-input" placeholder="Adicione uma tarefa">
+                    <button type="submit" class="add-task-button js-add-task-button">+</button>
+                </div>
+            </form>
+                
+            <div id="search-filter-container">
+                <form>
+                    <div id="search-box">
+                        <h2 id="search-title">Pesquisar:</h2>
+                        <input type="text" name="search" class="search-bar" placeholder="Pesquisar">
+                        <button class="search-button"><img src="assets/icons8-search-64.png" alt="search icon"></button>
+                    </div>
+                </form>
+
+                <form>
+                    <div id="filter-box">
+                        <h2 id="filter-title">Filtrar:</h2>
+                        <select class="filter-select">
+                            <option value="all">Todas as tarefas</option>
+                            <option value="done">Tarefas concluídas</option>
+                            <option value="todo">Tarefas a fazer</option>
+                        </select>
+                        <button class="filter-button"><img src="assets/filter.png" alt="filter icon"></button>
+                    </div>
+                </form>
+            </div>
+
+            <ul class="list js-list"></ul>
+    </main>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
