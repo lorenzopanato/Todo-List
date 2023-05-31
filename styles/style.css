@@ -62,13 +62,14 @@ body {
 
 #task-title, #search-title, #filter-title {
     grid-area: t;
+    font-size: 1.4rem;
 }
 
 .task-input, .search-bar, .filter-select {
     grid-area: i;
     border: 1px solid rgb(120, 120, 120);
     transition: 0.15s;
-    font-size: 15px;
+    font-size: 1rem;
     padding-left: 10px;
 }
 
@@ -79,7 +80,6 @@ body {
 }
 
 .task-input::placeholder, .search-bar::placeholder, .filter-select {
-    font-size: 15px;
     color: rgb(100, 100, 100);
 }
 
@@ -186,4 +186,62 @@ body {
 
 .done {
     background-color: rgba(48, 48, 48, 0.316)
+}
+
+@media (max-width: 1700px) {
+    .todo-container {
+        width: 450px;
+    }
+
+    #todo-title {
+        font-size: 2.2rem;
+    }
+    
+    #task-title, #search-title, #filter-title {
+        font-size: 1.2rem;
+    }
+    
+    .task-input, .search-bar, .filter-select {
+        font-size: 0.9rem;
+        padding-left: 8px;
+    }
+
+    #task-container {
+        row-gap: 3px;
+        column-gap: 5px;
+        padding-top: 16px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .todo-container {
+        width: 300px;
+    }
+
+    #todo-title {
+        font-size: 1.6rem;
+    }
+    
+    #task-title, #search-title, #filter-title {
+        font-size: 0.9rem;
+    }
+    
+    .task-input, .search-bar, .filter-select {
+        font-size: 0.7rem;
+        padding-left: 3px;
+    }
+
+    .search-bar, .filter-select {
+        width: 100px;
+    }
+
+    #task-container {
+        padding-bottom: 18px;
+    }
+
+    #search-box, #filter-box {
+        column-gap: 5px;
+        row-gap: 2px;
+    }
 }
